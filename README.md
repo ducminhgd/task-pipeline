@@ -124,7 +124,7 @@ sequenceDiagram
     deactivate Pipeline Divider
     API -->> Client: response
     deactivate API
-    rect rgb(75, 75, 75)
+    rect rgb(100, 100, 75)
     Job Runner ->> Database: get job information
     Database -->> Job Runner: job information
     Job Runner ->> Worker: send execute request
