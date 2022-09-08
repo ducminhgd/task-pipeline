@@ -136,3 +136,22 @@ sequenceDiagram
     Database -->> API: response
     API -) Job Runner: if the job pool is not full, get more job to execute
 ```
+
+## Job states
+
+```mermaid
+stateDiagram
+    direction TB
+    S1: READY
+    S2: IN PROGRESS
+    S3: DONE
+    S4: CANCELLED
+    S5: ERROR
+
+    [*] --> S1
+    S1 --> S2
+    S2 --> S3
+    S2 --> S1
+    S2 --> S5
+    S1 --> S4
+```
